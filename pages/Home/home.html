@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewliort" content="width=device-width, initial-scale=1.0" />
+    <title>BarisETAB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+
+    <style></style>
+  </head>
+
+  <header>
+    <img src="\src\assets\img\LogoLogo.png" alt="Logo" />
+    <nav class="container">
+      <ul class="navBar">
+        <li>Home</li>
+        <li>Menu</li>
+        <li>Featured</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <button class="signUpbtn">Sign Up</button>
+  </header>
+
+  <body>
+    <section>
+      <div style="display: flex; object-fit: contain">
+        <img
+          class="coffee"
+          src="./../../assets/img/CoffeeAd.png"
+          alt="Coffee"
+        />
+        <div>
+          <p class="textAd1">Discover the Perfect Brew</p>
+          <p class="textAd2">
+            Elevate your day with our Premium Coffee. Freshly Ground,
+            Sustainably Sourced, and Exquisitely Flavorful
+          </p>
+          <button class="orderNow">Order Now</button>
+      </div>
+    </section>
+
+    <section class="moreProducts">
+      <div>
+        <p>More than just a Coffee</p>
+        <p class="moreInfo" style="font-size: 30px">
+          We're here to make your day better. Indulge in Our Delectable Pastries
+          and Delightful Pasta.
+        </p>
+        <a id="seeMenu" class="moreInfo" style="font-size: 20px"
+          ><u>See menu</u></a
+        >
+      </div>
+    </section>
+
+    <section>
+      <nav class="moreNav">
+        <lu class="Nav2">
+          <li>pasta</li>
+          <li>pastry</li>
+        </lu>
+      </nav>
+    </section>
+
+    <section><div class="moreSample"></div></section>
+
+    <footer>
+      <div class="contactUs">Contact us at</div>
+      <div class="socials">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("seeMenu").addEventListener("click", () => {
+        window.location.href = "./../Menu/menu.html";
+      });
+    </script>
+  </body>
+</html>
