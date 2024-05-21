@@ -38,26 +38,27 @@
       <div style="display: flex; object-fit: contain">
         <img
           class="coffee"
+          id="homeLogo"
           src="./../../assets/img/CoffeeAd.png"
           alt="Coffee"
         />
-        <div>
+        <div class="ad-text">
           <p class="textAd1">Discover the Perfect Brew</p>
           <p class="textAd2">
             Elevate your day with our Premium Coffee. Freshly Ground, Sustainably Sourced, and Exquisitely Flavorful. Lorem ipsum dolor sit amet consectetur. Lacus facilisis nisl phasellus dignissim a enim turpis velit. Arcu odio egestas non suscipit mattis sed aliquam.
           </p>
-          <button class="orderNow">Order Now</button>
+          <button id="orderNow" class="orderNow">Order Now</button>
       </div>
     </section>
 
     <section class="moreProducts">
       <div>
         <p class="moreProducts">More than just a Coffee</p>
-        <p class="moreInfo" style="font-size: 30px">
+        <p class="seeMenu" style="font-size: 30px;">
           We're here to make your day better. Indulge in Our Delectable Pastries
           and Delightful Pasta.
         </p>
-        <a id="seeMenu" class="moreInfo" style="font-size: 20px"
+        <a id="seeMenu" class="seeMenu" style="font-size: 20px; cursor: pointer;"
           ><u>See menu</u></a
         >
       </div>
@@ -83,7 +84,13 @@
       </div>
     </footer>
     <script>
+      document.getElementById("orderNow").addEventListener("click", () => {
+        window.location.href = "./../Menu/menu.html";
+      });
       document.getElementById("seeMenu").addEventListener("click", () => {
+        window.location.href = "./../Menu/menu.html";
+      });
+      document.getElementById("homeLogo").addEventListener("click", () => {
         window.location.href = "./../Menu/menu.html";
       });
     </script>
