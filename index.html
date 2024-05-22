@@ -1,5 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="loading"></div>
+  </body>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loading").classList.add("loading--hidden");
+    });
+  </script>
+
   <script>
     window.location.href = "./pages/Home/home.html";
   </script>

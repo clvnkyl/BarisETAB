@@ -16,30 +16,98 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="./../../components/buttons.css" />
+    <link rel="stylesheet" href="./../../components/navBar.css" />
+    <link rel="stylesheet" href="./../../index.css" />
+    
 
-    <style></style>
+    <style>
+      .loading {
+        /* background: #000 url(./assets/img/loading.gif) no-repeat center center; */
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecb176;
+        transition:
+          opacity 1s,
+          visibility 1s;
+      }
+
+      .loading--hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loading::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 15px solid #ddd;
+        border-top-color: #ecb176;
+        border-radius: 50%;
+        animation: loading 1s ease infinite;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0turn);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
   </head>
 
+
+
   <header>
-    <img src="./../../assets/img/LogoLogo.png" alt="Logo" />
-    <nav class="container">
-      <ul class="navBar">
-        <li>Home</li>
-        <li>Menu</li>
-        <li>Featured</li>
-        <li>About</li>
-      </ul>
-    </nav>
-    <button class="signUpbtn">Sign Up</button>
+    <div class="container">
+      <div class="Logo">
+        <img class="logoimg" src="./../../assets/img/LogoLogo.png" alt="Logo" />
+      </div>
+      <nav >
+        <ul>
+          <li> 
+            <a href="./../Home/home.html"><u>Home</u></a>
+          </li>
+          <li>
+            <a href="./../Menu/menu.html">Menu</a>
+          </li>
+          <li>
+            <a href="./../Featured/featured.html">Featured</a>
+          </li>
+          <li>
+            <a href="./../About/aboutUs.html">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="signUp">
+        <a href="./../login/login.html"
+          ><button class="signUpbtn">Sign Up</button></a
+        >
+      </div>
+    </div>
+
+
+
+    
   </header>
 
   <body>
+    <div class="loading"></div>
+
     <section>
-      <div style="display: flex; object-fit: contain">
-        <img
+        <div style="display: flex; object-fit: contain">
+          <img
           class="coffee"
           id="homeLogo"
-          src="./../../assets/img/CoffeeAd.png"
+          src="./../../assets/img/CoffeeAd.svg"
           alt="Coffee"
         />
         <div class="ad-text">
@@ -47,8 +115,9 @@
           <p class="textAd2">
             Elevate your day with our Premium Coffee. Freshly Ground, Sustainably Sourced, and Exquisitely Flavorful. Lorem ipsum dolor sit amet consectetur. Lacus facilisis nisl phasellus dignissim a enim turpis velit. Arcu odio egestas non suscipit mattis sed aliquam.
           </p>
-          <button id="orderNow" class="orderNow">Order Now</button>
-      </div>
+          <a href="./../Menu/menu.html"><button class="orderNow">Order Now</button></a>
+        </div>
+      
     </section>
 
     <section class="moreProducts">
@@ -58,9 +127,8 @@
           We're here to make your day better. Indulge in Our Delectable Pastries
           and Delightful Pasta.
         </p>
-        <a id="seeMenu" class="seeMenu" style="font-size: 20px; cursor: pointer;"
-          ><u>See menu</u></a
-        >
+        <a href="./../Menu/menu.html" class="seeMenu" style="font-size: 20px; cursor: pointer;"
+          ><u>See menu</u></a>
       </div>
     </section>
 
@@ -83,16 +151,13 @@
         <a href="#" class="fa fa-google"></a>
       </div>
     </footer>
+
     <script>
-      document.getElementById("orderNow").addEventListener("click", () => {
-        window.location.href = "./../Menu/menu.html";
+      window.addEventListener("load", () => {
+        document.querySelector(".loading").classList.add("loading--hidden");
       });
-      document.getElementById("seeMenu").addEventListener("click", () => {
-        window.location.href = "./../Menu/menu.html";
-      });
-      document.getElementById("homeLogo").addEventListener("click", () => {
-        window.location.href = "./../Menu/menu.html";
-      });
+
     </script>
+
   </body>
 </html>

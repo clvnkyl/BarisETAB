@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  font-family: "Poppins", serif;
+  min-width: 1vw;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-image: linear-gradient(#ecb176, #ffebd8);
+}

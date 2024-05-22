@@ -6,62 +6,6 @@
   font-family: "Poppins", serif;
 }
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-header {
-  background-color: #ecb176;
-  padding: 1% 5% 1% 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: black 0 1px 10px 0.1px;
-}
-
-header img {
-  max-height: 80px;
-  margin: 0 1% 0 1%;
-}
-
-li {
-  font-weight: bold;
-  list-style-type: none;
-  font-size: 25px;
-  color: white;
-  padding: 5% 25% 5% 25%;
-  cursor: pointer;
-}
-
-.container {
-  display: flex;
-}
-
-.navBar {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-  font-weight: bold;
-  list-style-type: none;
-}
-
-.signUpbtn {
-  background-color: #a67b5b;
-  color: white;
-  border: none;
-  font-size: 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  padding: 10px 20px;
-  width: 150px;
-  height: 50px;
-}
-
 body {
   background-image: linear-gradient(#ecb176, #ffebd8);
 }
@@ -117,16 +61,6 @@ section {
   padding: 10px;
 }
 
-button:hover {
-  cursor: pointer;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  opacity: 80%;
-}
-
-button:active {
-  background-color: #6f4e37;
-}
-
 .moreProducts {
   text-align: center;
   font-size: 2em;
@@ -140,6 +74,7 @@ button:active {
   font-style: italic;
   font-weight: 300;
   margin: 20px 0;
+  justify-content: center;
 }
 
 .moreNav {
@@ -159,8 +94,9 @@ button:active {
 }
 
 .Nav2 li {
+  font-size: 2em;
   color: black;
-  margin: 0 10px;
+  margin: 0 50% 0 50%;
 }
 
 .moreSample {
