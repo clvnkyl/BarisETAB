@@ -21,51 +21,10 @@
     <link rel="stylesheet" href="./../../index.css" />
     
 
-    <style>
-      .loading {
-        /* background: #000 url(./assets/img/loading.gif) no-repeat center center; */
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #ecb176;
-        transition:
-          opacity 1s,
-          visibility 1s;
-      }
-
-      .loading--hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .loading::after {
-        content: "";
-        width: 100px;
-        height: 100px;
-        border: 15px solid #ddd;
-        border-top-color: #ecb176;
-        border-radius: 50%;
-        animation: loading 1s ease infinite;
-      }
-
-      @keyframes loading {
-        from {
-          transform: rotate(0turn);
-        }
-        to {
-          transform: rotate(1turn);
-        }
-      }
-    </style>
   </head>
 
-
-
+  <body>
+    
   <header>
     <div class="container">
       <div class="Logo">
@@ -98,9 +57,7 @@
 
     
   </header>
-
-  <body>
-    <div class="loading"></div>
+    
 
     <section>
         <div style="display: flex; object-fit: contain">
@@ -111,7 +68,7 @@
           alt="Coffee"
         />
         <div class="ad-text">
-          <p class="textAd1">Discover the Perfect Brew</p>
+          <h1 class="textAd1">Discover the Perfect Brew</h1>
           <p class="textAd2">
             Elevate your day with our Premium Coffee. Freshly Ground, Sustainably Sourced, and Exquisitely Flavorful. Lorem ipsum dolor sit amet consectetur. Lacus facilisis nisl phasellus dignissim a enim turpis velit. Arcu odio egestas non suscipit mattis sed aliquam.
           </p>
@@ -122,14 +79,14 @@
 
     <section class="moreProducts">
       <div>
-        <p class="moreProducts">More than just a Coffee</p>
-        <p class="seeMenu" style="font-size: 30px;">
+        <h1 class="moreProducts">More than just a Coffee</h1>
+        <p class="moreProductsDesc">
           We're here to make your day better. Indulge in Our Delectable Pastries
           and Delightful Pasta.
         </p>
-        <a href="./../Menu/menu.html" class="seeMenu" style="font-size: 20px; cursor: pointer;"
-          ><u>See menu</u></a>
       </div>
+      <div class="seeMenu"><a href="./../Menu/menu.html"  style="font-size: 20px; cursor: pointer;"
+        ><u>See menu</u></a></div>
     </section>
 
     <section>
@@ -141,23 +98,48 @@
       </nav>
     </section>
 
-    <section><div class="moreSample"></div></section>
-
-    <footer>
+    <div class="otherProducts">
+      <div class="moreSample">
+        <figure>
+          <img src="./../../assets/img/coffee1.jpg" alt="Sample">
+          <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, saepe quibusdam. Officia odio maxime aut totam minima? Magni nemo expedita laudantium saepe ipsum beatae facilis nisi autem, impedit, minima doloremque?</figcaption>
+        </figure>
+        <figure>
+          <img src="./../../assets/img/coffee1.jpg" alt="Sample">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit eius consectetur amet eveniet deleniti, quaerat animi neque minima suscipit inventore. Minus quo, quam deserunt dolor nihil magnam illo laboriosam!</figcaption>
+        </figure>
+        <figure>
+          <img src="./../../assets/img/coffee1.jpg" alt="Sample">
+          <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus magni corporis earum unde nulla, animi rerum. Excepturi officiis, totam maxime ipsam, cum error voluptatum exercitationem est unde ipsum aperiam.</figcaption>
+        </figure>
+        <figure>
+          <img src="./../../assets/img/coffee1.jpg" alt="Sample">
+          <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit officia dolorem sapiente, cumque nam quisquam totam temporibus animi placeat voluptates dolore a quia ratione architecto quibusdam voluptas sed quas. Explicabo?</figcaption>
+        </figure>
+        <figure>
+          <img src="./../../assets/img/coffee1.jpg" alt="Sample">
+          <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit officia dolorem sapiente, cumque nam quisquam totam temporibus animi placeat voluptates dolore a quia ratione architecto quibusdam voluptas sed quas. Explicabo?</figcaption>
+        </figure>
+      </div>
+    </div>
+    
+    <div class="footer">
       <div class="contactUs">Contact us at</div>
       <div class="socials">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-google"></a>
       </div>
-    </footer>
+    </div>
 
     <script>
-      window.addEventListener("load", () => {
+      /* window.addEventListener("load", () => {
         document.querySelector(".loading").classList.add("loading--hidden");
-      });
+      }); */
 
     </script>
 
   </body>
+
+ 
 </html>

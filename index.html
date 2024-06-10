@@ -1,7 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="index.css" />
+
+    <style>
+      .loading {
+        /* background: #000 url(./assets/img/loading.gif) no-repeat center center; */
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecb176;
+        transition: opacity 1s, visibility 1s;
+      }
+
+      .loading--hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loading::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 15px solid #ddd;
+        border-top-color: #ecb176;
+        border-radius: 50%;
+        animation: loading 1s ease infinite;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0turn);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -10,11 +50,10 @@
 
   <script>
     window.addEventListener("load", () => {
-      document.querySelector(".loading").classList.add("loading--hidden");
+      setTimeout(() => {
+        document.querySelector(".loading").classList.add("loading--hidden");
+        window.location.href = "./pages/login/login.html";
+      }, 1000);
     });
-  </script>
-
-  <script>
-    window.location.href = "./pages/Home/home.html";
   </script>
 </html>

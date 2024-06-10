@@ -1,4 +1,4 @@
-.signUpbtn {
+button {
   background-color: #a67b5b;
   color: white;
   border: none;
@@ -18,4 +18,16 @@ button:hover {
 
 button:active {
   background-color: #6f4e37;
+}
+
+.addToCart {
+  background-color: #a67b5b;
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 50%;
+  height: auto;
 }
