@@ -7,16 +7,71 @@
 }
 
 body {
-  background-image: linear-gradient(#ecb176, #ffebd8);
+  background-color: white;
   height: 100%;
 }
 
-.coffee-based h1 {
+/* NAVIGATION FOR CATEGORIES */
+/* NAVIGATION FOR CATEGORIES */
+/* NAVIGATION FOR CATEGORIES */
+
+.productCategories {
+  text-align: left;
+  margin: 10px 0 0 15px;
+}
+
+.productCategories a {
+  display: inline-block;
+  color: black;
   text-align: center;
-  font-size: 40px;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+}
+
+.productCategories a:hover {
+  background-color: #a67b5b;
+  color: black;
+}
+
+.productCategories a.active {
+  background-color: #6f4e37;
+  color: white;
+}
+
+/* PRODUCTS */
+/* PRODUCTS */
+/* PRODUCTS */
+/* PRODUCTS */
+
+.coffee-based h1,
+.non-coffee h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
   color: black;
   text-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
-  margin: 20px 0;
+}
+
+.coffee-based,
+.non-coffee,
+.pasta {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  color: black;
+  text-shadow: 0 5px 10px rgba(255, 255, 255, 0.7);
+  margin: 10px 0 80px 0;
+}
+
+.productsContainer {
+  display: none;
+}
+
+.productsContainer.active {
+  display: block;
 }
 
 .productMenu {
@@ -25,8 +80,8 @@ body {
   white-space: nowrap;
   padding: 10px;
   filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.3));
-  margin: 0 20px;
-  border: #a67b5b 10px solid;
+  margin: 20px 30px;
+  border: #a67b5b 15px solid;
   border-radius: 10px;
 }
 
@@ -48,8 +103,9 @@ body {
 .productMenu img {
   max-width: 500px;
   width: 100%;
-  height: auto;
+  height: 300px;
   display: block;
+  object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -57,7 +113,7 @@ body {
 .productMenu figcaption {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: rgb(0, 0, 0);
   font-size: auto;
   word-wrap: break-word;
