@@ -15,73 +15,7 @@
 
     <link rel="stylesheet" href="./../../components/buttons.css" />
     <link rel="stylesheet" href="./../../index.css" />
-
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url("./../../assets/img/9387107.jpg");
-      }
-      .formLogin {
-        min-width: 500px;
-        max-width: 750px;
-        height: auto;
-        padding: 40px;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        backdrop-filter: blur(50px);
-        border-radius: 30px;
-      }
-
-      .login {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 1%;
-      }
-
-      .loginInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 1%;
-      }
-
-      .loginInfo input {
-        background-color: #fed8b1;
-        font-size: large;
-        width: 70%;
-        height: 50px;
-        margin: 3%;
-      }
-
-      .loginInfo p {
-        margin: 0.5%;
-        font-size: 3em;
-      }
-
-      .loginInfo a {
-        margin: 0.5%;
-      }
-
-      .loginImg {
-        min-height: 100px;
-        max-height: 150px;
-        width: auto;
-        margin: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="./login.css" />
   </head>
 
   <header></header>
@@ -112,7 +46,7 @@
               placeholder="Password"
             />
 
-            <a href="">Forgot Password?</a>
+            <a href="" id="forgotPw">Forgot Password?</a>
             <a href="./signup.html">Sign Up</a>
 
             <button id="loginbtn" type="submit">Login</button>
@@ -120,6 +54,23 @@
         </div>
       </form>
     </div>
+
+    <form action="" class="forgotPass">
+      <span class="close" id="close">X</span>
+      <p style="font-size: 2rem; margin: 0 0 20px 0; text-align: left">
+        Forgot Password?
+      </p>
+      <div class="forgotPassInfo">
+        <p>Enter Email</p>
+        <input
+          type="email"
+          name="verifyEmail"
+          id="verificationEmail"
+          placeholder="Enter your email address"
+        />
+        <button id="sendCode" class="sendEmail" type="submit">Send</button>
+      </div>
+    </form>
 
     <script type="module" src="login.js"></script>
   </body>

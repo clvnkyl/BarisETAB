@@ -8,6 +8,7 @@ import {
   getFirestore,
   doc,
   setDoc,
+  getDoc,
 } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
 // Your web app's Firebase configuration
@@ -42,16 +43,19 @@ document
       const user = userCredential.user;
 
       // Create a document in Firestore for the new user
-      await setDoc(doc(db, "users", user.uid), {
+      await setDoc(doc(db, "user_accounts", user.email), {
         email: user.email,
         createdAt: new Date(),
       });
-
       alert("Register Successful");
+
       window.location.href = "login.html";
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert("Register Failed: " + errorMessage + " (Code: " + errorCode + ")");
+      alert("Register Failed: " + errorCode);
     }
+
+    email.value = "";
+    password.value = "";
   });

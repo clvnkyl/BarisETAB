@@ -1,5 +1,12 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,14 +22,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Monitor auth state
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    document.getElementById("status").innerText = "User is logged in.";
-    window.location.href = "./../Home/home.html";
-  } else {
-    document.getElementById("status").innerText = "No user is logged in.";
-    window.location.href = "./../Login/login.html";
+// Handle logout
+document.getElementById("signUpbtn").addEventListener("click", async () => {
+  try {
+    alert("Logged out successfully.");
+    window.location.href = "./../Login/login.html"; // Redirect to login page
+  } catch (error) {
+    alert("Logout Failed: " + error.message);
   }
 });

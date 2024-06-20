@@ -20,6 +20,19 @@ button:active {
   background-color: #6f4e37;
 }
 
+.sendEmail,
+.forgotVerifyBtn {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  width: 90px;
+  height: 30px;
+  padding: 1px;
+}
+
 .addToCart {
   background-color: #6f4e37;
   color: white;

@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/fireba
 import {
   getAuth,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
@@ -19,6 +20,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+/* LOGIN */
+/* LOGIN */
+/* LOGIN */
 document.getElementById("loginbtn").addEventListener("click", async (event) => {
   event.preventDefault(); // Prevent the default form submission
 
@@ -31,12 +35,45 @@ document.getElementById("loginbtn").addEventListener("click", async (event) => {
       email,
       password
     );
+
     alert("Login Successful");
-    const user = userCredential.user;
-    window.location.href = "./../Home/home.html"; // Redirect to home page
+    // Redirect to home page
+    window.location.href = "./../Home/home.html";
   } catch (error) {
     const errorCode = error.code;
-    const errorMessage = error.message;
-    alert("Login Failed: " + errorMessage + " (Code: " + errorCode + ")");
+    alert("Login Failed: " + error.message);
   }
+
+  // Clear input fields
+  document.getElementById("user").value = "";
+  document.getElementById("pw").value = "";
+});
+
+/* OPEN/CLOSE FORM */
+/* OPEN/CLOSE FORM */
+/* OPEN/CLOSE FORM */
+
+document.getElementById("forgotPw").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".forgotPass").style.display = "block";
+});
+
+document.getElementById("close").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".forgotPass").style.display = "none";
+});
+
+document.getElementById("sendCode").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const verifyEmail = document.getElementById("verificationEmail").value;
+
+  sendPasswordResetEmail(auth, verifyEmail)
+    .then(() => {
+      alert("Password reset sent to " + verifyEmail);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
 });
